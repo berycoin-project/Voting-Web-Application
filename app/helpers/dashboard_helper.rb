@@ -1,8 +1,11 @@
 module DashboardHelper
   def projects
-    current_user.projects.count
+    current_user.projects
   end
-  def active_projects
-
+  def comments
+    current_user.comments
+  end
+  def revenue
+    
   end
 end

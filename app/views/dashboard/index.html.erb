@@ -1,6 +1,7 @@
 <h1>Dashboard#index</h1>
-<h3> Total Projects: <%= projects %> </h3>
-<h3> Total Projects: <%= projects %> </h3>
+<h3> Completed Projects: <%= projects.count %> </h3>
+<h3> Revenue Generated : <%= revenue %> Berycoins </h3>
+<h3> Comments posted   : <%= comments.count %> </h3>
 
 <p><%= link_to 'Home', root_path, {class: "btn btn-primary"} %> <== Go Home </p>
 <p><%= link_to 'Visitors', visitors_index_path , {class: "btn btn-success"}%> <== Go Visitors </p>

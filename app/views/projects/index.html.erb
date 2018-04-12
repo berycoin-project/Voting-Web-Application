@@ -11,12 +11,13 @@
           <table>
             <thead>
               <tr>
-                          <th>Name</th>
-                          <th>Status</th>
-                          <th>Project content</th>
-                          <th>Project skills</th>
-                          <th>Project budget</th>
-                          <th colspan="3"></th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Project content</th>
+                <th>Project skills</th>
+                <th>Project budget</th>
+                <th>Project Comments</th>
+                <th colspan="3"></th>
               </tr>
             </thead>
 
@@ -32,6 +33,7 @@
                   <td><%= project.project_content %></td>
                   <td><%= project.project_skills %></td>
                   <td><%= project.project_budget %></td>
+                  <td><%= project.comments.count %></td>
                   <td><%= link_to 'Show', project %></td>
                   <td><%= link_to 'Edit', edit_project_path(project) %></td>
                   <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
