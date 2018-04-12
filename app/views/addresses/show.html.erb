@@ -1,0 +1,43 @@
+<div class="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Show Record</h5>
+        </div>
+        <div class="card-body">
+
+        <p id="notice"><%= notice %></p>
+
+                <p>
+          <strong>Name:</strong>
+          <%= @address.name %>
+        </p>
+
+                <p>
+          <strong>Street address:</strong>
+          <%= @address.street_address %>
+        </p>
+
+                <p>
+          <strong>Country:</strong>
+          <%= @address.country %>
+        </p>
+
+                <p>
+          <strong>City:</strong>
+          <%= @address.city %>
+        </p>
+
+                <p>
+          <strong>Zip code:</strong>
+          <%= @address.zip_code %>
+        </p>
+
+                <%= link_to 'Edit', edit_address_path(@address) %> |
+        <%= link_to 'Back', addresses_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

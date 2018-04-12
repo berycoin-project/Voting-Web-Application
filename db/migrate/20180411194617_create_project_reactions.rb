@@ -1,0 +1,11 @@
+class CreateProjectReactions < ActiveRecord::Migration[5.0]
+  def change
+    create_table :project_reactions do |t|
+      t.references :user, foreign_key: true
+      t.references :project, foreign_key: true
+      t.references :reaction, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end

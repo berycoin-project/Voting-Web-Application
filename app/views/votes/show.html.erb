@@ -1,0 +1,38 @@
+<div class="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Show Record</h5>
+        </div>
+        <div class="card-body">
+
+        <p id="notice"><%= notice %></p>
+
+                <p>
+          <strong>Name:</strong>
+          <%= @vote.name %>
+        </p>
+
+                <p>
+          <strong>Vote type:</strong>
+          <%= @vote.vote_type %>
+        </p>
+
+                <p>
+          <strong>Vote weight:</strong>
+          <%= @vote.vote_weight %>
+        </p>
+
+                <p>
+          <strong>Vote message:</strong>
+          <%= @vote.vote_message %>
+        </p>
+
+                <%= link_to 'Edit', edit_vote_path(@vote) %> |
+        <%= link_to 'Back', votes_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">All Records</h5>
+          <h2 class="card-title">Addresses</h2>
+        </div>
+        <div class="card-body">
+          <p id="notice"><%= notice %></p>
+          <table>
+            <thead>
+              <tr>
+                          <th>Name</th>
+                          <th>Street address</th>
+                          <th>Country</th>
+                          <th>City</th>
+                          <th>Zip code</th>
+                          <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @addresses.each do |address| %>
+                <tr>
+                            <td><%= address.name %></td>
+                            <td><%= address.street_address %></td>
+                            <td><%= address.country %></td>
+                            <td><%= address.city %></td>
+                            <td><%= address.zip_code %></td>
+                            <td><%= link_to 'Show', address %></td>
+                  <td><%= link_to 'Edit', edit_address_path(address) %></td>
+                  <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <br>
+
+          <%= link_to 'New Address', new_address_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

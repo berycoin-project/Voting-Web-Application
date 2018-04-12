@@ -1,0 +1,43 @@
+<div class="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Show Record</h5>
+        </div>
+        <div class="card-body">
+
+        <p id="notice"><%= notice %></p>
+
+                <p>
+          <strong>Name:</strong>
+          <%= @profile.name %>
+        </p>
+
+                <p>
+          <strong>First name:</strong>
+          <%= @profile.first_name %>
+        </p>
+
+                <p>
+          <strong>Last name:</strong>
+          <%= @profile.last_name %>
+        </p>
+
+                <p>
+          <strong>Date of birth:</strong>
+          <%= @profile.date_of_birth %>
+        </p>
+
+                <p>
+          <strong>Gender:</strong>
+          <%= @profile.gender %>
+        </p>
+
+                <%= link_to 'Edit', edit_profile_path(@profile) %> |
+        <%= link_to 'Back', profiles_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

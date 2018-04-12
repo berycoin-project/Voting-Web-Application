@@ -1,0 +1,38 @@
+<div class="content">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Show Record</h5>
+        </div>
+        <div class="card-body">
+
+        <p id="notice"><%= notice %></p>
+
+                <p>
+          <strong>Name:</strong>
+          <%= @project.name %>
+        </p>
+
+                <p>
+          <strong>Project content:</strong>
+          <%= @project.project_content %>
+        </p>
+
+                <p>
+          <strong>Project skills:</strong>
+          <%= @project.project_skills %>
+        </p>
+
+                <p>
+          <strong>Project budget:</strong>
+          <%= @project.project_budget %>
+        </p>
+
+                <%= link_to 'Edit', edit_project_path(@project) %> |
+        <%= link_to 'Back', projects_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
