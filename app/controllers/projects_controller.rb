@@ -1,11 +1,12 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  include ProjectsHelper
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects
+    @projects ||= current_user.projects
   end
 
   # GET /projects/1
@@ -27,6 +28,7 @@ class ProjectsController < ApplicationController
   def create
 
     @project = Project.new(project_params)
+    @project.statuses << fresh
 
     respond_to do |format|
       if @project.save

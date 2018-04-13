@@ -25,11 +25,7 @@
               <% @projects.each do |project| %>
                 <tr>
                   <td><%= project.name %></td>
-                    <% if project.statuses.first == nil%>
-                    <td><span class="btn btn-default">New</span></td>
-                    <% else %>
-                    <td><span class="btn btn-info"><%= project.statuses.first.name %></span></td>
-                    <% end %>
+                  <td><span class="btn btn-default"><%= project.statuses.first.name %></span></td>
                   <td><%= project.project_content %></td>
                   <td><%= project.project_skills %></td>
                   <td><%= project.project_budget %></td>
