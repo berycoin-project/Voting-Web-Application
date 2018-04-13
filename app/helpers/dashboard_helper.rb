@@ -6,6 +6,6 @@ module DashboardHelper
     current_user.comments
   end
   def revenue
-    
+    current_user.projects.sum(:project_budget)
   end
 end

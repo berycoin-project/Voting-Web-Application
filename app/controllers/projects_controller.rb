@@ -25,10 +25,12 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+
     @project = Project.new(project_params)
 
     respond_to do |format|
       if @project.save
+        current_user.projects << @project
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
@@ -70,7 +72,7 @@ class ProjectsController < ApplicationController
         @project = Project.find(params[:id])
       else
         respond_to do |format|
-          format.html { redirect_to projects_url, notice: 'Project does not exist', class: 'danger' }
+          format.html { redirect_to projects_url, error: 'Project does not exist' }
           format.json { head :no_content }
         end
       end
