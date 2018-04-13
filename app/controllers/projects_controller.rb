@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  include ProjectsHelper
+  include ApplicationHelper
 
   # GET /projects
   # GET /projects.json
