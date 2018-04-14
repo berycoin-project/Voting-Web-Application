@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require summernote/summernote-bs4.min
+//= require summernote-init
 //= require_tree .
